@@ -1,6 +1,6 @@
 import ObservablePromise from "./observable";
 
-function fething(arg) {
+function fetching(arg) {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log("resolve");
@@ -12,7 +12,7 @@ function fething(arg) {
   // return {data: arg}
 }
 
-const observableFetching = ObservablePromise(fething);
+const observableFetching = ObservablePromise(fetching);
 
 async function clickHandler({ target }) {
   observableFetching(target.innerText).then((data) => {
